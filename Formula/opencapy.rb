@@ -11,7 +11,7 @@ class Opencapy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/richardyc/opencapy/releases/download/v0.2.61/opencapy_darwin_amd64.tar.gz"
-      sha256 "a36e43221ce56dbe8b61981828523d0b0a2cd1d95dc839a873a1719dcade28a7"
+      sha256 "80ea6d389bdabeee1fc397238f4f0d87763f296264a1586f43ae91f11046d353"
 
       define_method(:install) do
         bin.install "opencapy"
@@ -19,7 +19,7 @@ class Opencapy < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/richardyc/opencapy/releases/download/v0.2.61/opencapy_darwin_arm64.tar.gz"
-      sha256 "cc58b09d936949ce027355f5e1fdd0512f3055245a4b1d307bb15e8b789d4b58"
+      sha256 "8bc5a19fb1654490bb4497e1c55f91fb6f026cf43c71489d678141a894ca6b5f"
 
       define_method(:install) do
         bin.install "opencapy"
@@ -30,14 +30,14 @@ class Opencapy < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/richardyc/opencapy/releases/download/v0.2.61/opencapy_linux_amd64.tar.gz"
-      sha256 "29966403e856b6bca78b91548c77e962a6d659e94c149caf7c4676b378a48162"
+      sha256 "e9b1e52e7a2e9c347d6838e267e6fd984722d19e8b6118f8c377ae2789b39748"
       define_method(:install) do
         bin.install "opencapy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/richardyc/opencapy/releases/download/v0.2.61/opencapy_linux_arm64.tar.gz"
-      sha256 "34b0defaf985bbe957c382cf43cbb491f1f88f226c46ffe4b7f72a46d1172c57"
+      sha256 "c3b3708f4dbb32002be03fd12f5dc83e9ff84eb25c4700ca3da641cfd770cecc"
       define_method(:install) do
         bin.install "opencapy"
       end
