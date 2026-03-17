@@ -5,21 +5,21 @@
 class Opencapy < Formula
   desc "Your machines, mirrored. Code from anywhere."
   homepage "https://opencapy.dev"
-  version "0.2.65"
+  version "0.2.66"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/richardyc/opencapy/releases/download/v0.2.65/opencapy_darwin_amd64.tar.gz"
-      sha256 "924884918f6d37c2a9594ef07df4dd67bbdb87675496ab2eae0ef74d12de60dc"
+      url "https://github.com/richardyc/opencapy/releases/download/v0.2.66/opencapy_darwin_amd64.tar.gz"
+      sha256 "e37c757ceb2777fac389a111c000a325a1666662015f2c0758c2a2723661ff50"
 
       define_method(:install) do
         bin.install "opencapy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/richardyc/opencapy/releases/download/v0.2.65/opencapy_darwin_arm64.tar.gz"
-      sha256 "f26ff6c8cd13764276cd03b287f2945ddd1cfb2172a0b49bef79a996fa61aa85"
+      url "https://github.com/richardyc/opencapy/releases/download/v0.2.66/opencapy_darwin_arm64.tar.gz"
+      sha256 "ece36b552067c28f26fc2cd7e75195360dc4cf4c4e6d5cf96ffd3b58223c33bf"
 
       define_method(:install) do
         bin.install "opencapy"
@@ -29,15 +29,15 @@ class Opencapy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardyc/opencapy/releases/download/v0.2.65/opencapy_linux_amd64.tar.gz"
-      sha256 "6472b54a081992444d610abc6510bae0b5d85ba0c3cac2cebc018fc244616bd9"
+      url "https://github.com/richardyc/opencapy/releases/download/v0.2.66/opencapy_linux_amd64.tar.gz"
+      sha256 "a425c7752e1071c94ad94831bfe1f68e249512ed5cff865d8d7d097733b7a0e9"
       define_method(:install) do
         bin.install "opencapy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/richardyc/opencapy/releases/download/v0.2.65/opencapy_linux_arm64.tar.gz"
-      sha256 "90a3b384411b98058540e071465ad83805d6b0f5f98e1c30087fcafce901ba13"
+      url "https://github.com/richardyc/opencapy/releases/download/v0.2.66/opencapy_linux_arm64.tar.gz"
+      sha256 "cc51e72748712cbf7ea9af53f4428a6c1ed91cebc8dfbef30696cbc76f3cd7d5"
       define_method(:install) do
         bin.install "opencapy"
       end
